@@ -1,1 +1,1 @@
-# Pegaxy-Tracker
+# PegaxyTracker
