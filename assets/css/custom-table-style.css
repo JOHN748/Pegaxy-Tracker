@@ -51,7 +51,7 @@ a{
 
 /* Buttons CSS */
 
-.btn-copy, .btn-excel, .btn-pdf, .btn-csv, .btn-print, .btn-ownracedvis, .btn-renteevis, .btn-rentervis, .btn-showall{
+.btn-copy, .btn-excel, .btn-pdf, .btn-csv, .btn-print, .btn-ownracedvis, .btn-renteevis, .btn-rentervis, .btn-ownervis, .btn-showall{
 	cursor: pointer !important;
 }
 

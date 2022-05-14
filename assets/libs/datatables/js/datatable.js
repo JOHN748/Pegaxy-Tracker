@@ -20,6 +20,7 @@ $(document).ready(function() {
                     'own_raced_vis'  : data[i].ownRacedVis,
                     'rentee_vis' : data[i].renteeVisShare,
                     'renter_vis' : data[i].renterVisShare,
+                    'owner_vis' : data[i].ownRacedVis+data[i].renteeVisShare,
                     'total_vis' : data[i].ownRacedVis+data[i].renteeVisShare+data[i].renterVisShare
                 })
             }
@@ -33,6 +34,7 @@ $(document).ready(function() {
             {'data': 'own_raced_vis'},
             {'data': 'rentee_vis'},
             {'data': 'renter_vis'},
+            {'data': 'owner_vis'},
             {'data': 'total_vis'}
         ],
 
@@ -62,20 +64,26 @@ $(document).ready(function() {
             {
                 extend: 'colvisGroup',
                 text: 'Own Raced VIS',
-                show: [ 1, 3, 4 ,5],
+                show: [ 1, 3, 4 , 5, 6],
                 hide: [2]
             },
             {
                 extend: 'colvisGroup',
                 text: 'Rentee VIS',
-                show: [ 1, 2 ,4 ,5],
+                show: [ 1, 2 ,4 , 5, 6],
                 hide: [3]
             },
             {
                 extend: 'colvisGroup',
                 text: 'Renter VIS',
-                show: [ 1, 2 ,3, 5],
+                show: [ 1, 2 ,3, 5, 6],
                 hide: [4]
+            },
+            {
+                extend: 'colvisGroup',
+                text: 'Owner VIS',
+                show: [ 1, 2 ,3, 4, 6],
+                hide: [5]
             },
             {
                 extend: 'colvisGroup',
@@ -139,9 +147,14 @@ $(document).ready(function() {
         table.button( '7' ).trigger();
     });
 
-    $('.btn-showall').on('click',function(){
+    $('.btn-ownervis').on('click',function(){
         var table = $('#datatable').DataTable();
         table.button( '8' ).trigger();
+    });
+
+    $('.btn-showall').on('click',function(){
+        var table = $('#datatable').DataTable();
+        table.button( '9' ).trigger();
     });        
 
 });

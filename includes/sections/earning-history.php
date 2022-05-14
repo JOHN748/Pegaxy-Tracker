@@ -44,6 +44,9 @@
                                     <a class="dropdown-item btn-rentervis">
                                         <i class="fas fa-eye-slash"></i>&nbsp Renter VIS
                                     </a>
+                                    <a class="dropdown-item btn-ownervis">
+                                        <i class="fas fa-eye-slash"></i>&nbsp Owner VIS
+                                    </a>
                                     <a class="dropdown-item btn-showall">
                                         <i class="fas fa-eye"></i>&nbsp Show All
                                     </a>
@@ -77,6 +80,7 @@
                             <th class="text-center">Own Raced VIS</th>
                             <th class="text-center">Rentee VIS</th>
                             <th class="text-center">Renter VIS</th>
+                            <th class="text-center">Owner VIS</th>
                             <th class="text-center">Total VIS</th>
                         </tr>
                     </thead>
