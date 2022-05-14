@@ -17,18 +17,17 @@ var url3 = 'https://deep-index.moralis.io/api/v2/0xc580Aaf1D3C119E050AAEBf51D8cf
 var url4 = 'https://api-apollo.pegaxy.io/v1/assets/count/user/0xc580Aaf1D3C119E050AAEBf51D8cf912c8183A0A';
 // User Pegas
 var url5 = 'https://api-apollo.pegaxy.io/v1/pegas/owner/user/0xc580Aaf1D3C119E050AAEBf51D8cf912c8183A0A';
-// Earnings History
-var url6 = 'https://api-apollo.pegaxy.io/v1/earnings/historical/user/0xc580Aaf1D3C119E050AAEBf51D8cf912c8183A0A';
 
 $.when(
     $.getJSON(url1),
     $.getJSON(url2),
     $.getJSON(url3),
     $.getJSON(url4),
-    $.getJSON(url5),
-    $.getJSON(url6)
-).done(function (data1, data2, data3, data4, data5, data6){
+    $.getJSON(url5)
+).done(function (data1, data2, data3, data4, data5){
 
+    // Wallet Section
+    
     var matic = data1[0].data.MATIC.quote.USD.price;
     var usdt  = data1[0].data.USDT.quote.USD.price;
     var usdc  = data1[0].data.USDC.quote.USD.price;
@@ -80,6 +79,9 @@ $.when(
     document.getElementById('visoff_price').innerHTML = '$'+Math.round((lockedvis*vis)*100)/100;
     document.getElementById('pega').innerHTML = pega;
 
+    
+    // Pegas Section
+    
     var total_pega = data5[0].length, resting_pega = 0, racing_pega = 0, rented_pega = 0, market_pega = 0;
 
     for(i=0; i<data5[0].length; i++){
@@ -100,6 +102,5 @@ $.when(
     document.getElementById('rentedpega').innerHTML = rented_pega;
     document.getElementById('shareprofit').innerHTML = rented_pega;
     document.getElementById('marketpega').innerHTML = market_pega;
-
 
 });

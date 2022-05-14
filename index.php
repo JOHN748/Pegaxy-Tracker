@@ -11,6 +11,7 @@
     <?php include 'includes/header/header-styles.php'; ?>
     <!-- Script JS -->
     <?php include 'includes/header/header-scripts.php'; ?>
+
     <style type="text/css">
         .row.equal-cols {
           display: -webkit-flex;
@@ -67,7 +68,7 @@
                 <?php include 'includes/sections/pegas.php' ?>
 
                 <!-- EARNING HISTORY -->
-
+                <?php include 'includes/sections/earning-history.php' ?>
 
 
 
