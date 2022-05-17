@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    // DataTable initialisation
     $('#datatable').DataTable({
 
         'ajax'   : {
@@ -10,19 +9,30 @@ $(document).ready(function() {
             var return_data = new Array();
             var len = 1;
             for(var i=data.length-1; i>=0; i--){
-                var id = i-(i-len);
-                len++;
-                var epoch = new Date(data[i].epoch*1000);
-                var date  = epoch.toLocaleDateString();
-                return_data.push({
-                    'id': id,
-                    'date' : date,
-                    'own_raced_vis'  : data[i].ownRacedVis,
-                    'rentee_vis' : data[i].renteeVisShare,
-                    'renter_vis' : data[i].renterVisShare,
-                    'owner_vis' : data[i].ownRacedVis+data[i].renteeVisShare,
-                    'total_vis' : data[i].ownRacedVis+data[i].renteeVisShare+data[i].renterVisShare
-                })
+                
+                var count = data[i].ownRacedVis+data[i].renteeVisShare+data[i].renterVisShare;
+
+                if(count != 0){
+                    var id = i-(i-len);
+                    len++;
+                    var epoch = new Date(data[i].epoch*1000);
+                    var date  = epoch.toLocaleDateString('en', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric',
+                    });
+                
+                    return_data.push({
+                        'id': id,
+                        'date' : date,
+                        'own_raced_vis'  : data[i].ownRacedVis,
+                        'rentee_vis' : data[i].renteeVisShare,
+                        'renter_vis' : data[i].renterVisShare,
+                        'owner_vis' : data[i].ownRacedVis+data[i].renteeVisShare,
+                        'total_vis' : data[i].ownRacedVis+data[i].renteeVisShare+data[i].renterVisShare
+                    })
+                }
+
             }
                 return return_data;
             }
@@ -166,3 +176,34 @@ $(document).ready(function() {
         dataTable.fnFilter(this.value);
     });    
 });
+
+$(document).ready(function() {
+ var dataTable = $("#datatable").DataTable();
+
+ minDateFilter = "";
+ maxDateFilter = "";
+
+ $("#daterange").daterangepicker();
+ $("#daterange").on("apply.daterangepicker", function(ev, picker) {
+  minDateFilter = Date.parse(picker.startDate);
+  maxDateFilter = Date.parse(picker.endDate);
+
+  $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
+  var date = Date.parse(data[1]);
+
+  if (
+   (isNaN(minDateFilter) && isNaN(maxDateFilter)) ||
+   (isNaN(minDateFilter) && date <= maxDateFilter) ||
+   (minDateFilter <= date && isNaN(maxDateFilter)) ||
+   (minDateFilter <= date && date <= maxDateFilter)
+  ) {
+   return true;
+  }
+  return false;
+ });
+ dataTable.draw();
+}); 
+
+});
+ 
+ 

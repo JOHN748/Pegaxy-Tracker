@@ -13,6 +13,8 @@
 <script src="assets/libs/datatables/js/jquery.dataTables.min.js"></script>
 <script src="assets/libs/datatables/js/dataTables.bootstrap4.min.js"></script>
 <script src="assets/libs/datatables/js/datatable.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
 <!-- Buttons JS -->
 <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>

@@ -61,11 +61,9 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            <input type="text" id="searchbox" class="form-control float-rc ml-3  mb-3" placeholder="Search Users.." style="width: auto;">
+                            <input type="text" id="searchbox" class="form-control float-rc ml-3  mb-3" placeholder="Search..." style="width: auto;">
 
-                            <a href="" class="btn tbtn float-rc mb-3">
-                                <i class="fas fa-plus"></i>
-                            </a>
+                            <input id="daterange" class="form-control float-rc mb-3" style="width: auto;">
 
                         </div>
                     </div>
