@@ -134,7 +134,7 @@
                                 <h6 class="m-0">Addresses</h6>
                             </div>
                             <div class="col-auto">
-                                <a href="#!" class="small">View All</a>
+                                <a href="#" style="color: white;"><i class='bx bx-folder-plus'></i> Add</a>
                             </div>
                         </div>
                     </div>
