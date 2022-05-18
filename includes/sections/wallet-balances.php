@@ -1,4 +1,10 @@
-<div class="row equal-cols pt-3">
+<div class="row">
+    <div class="col-12">
+        <h5 class="text-muted mb-3 pt-2">Wallet</h5>
+    </div>
+</div>
+
+<div class="row equal-cols">
     <div class="col-md-3">
         <div class="card mini-stats-wid">
             <div class="card-body">

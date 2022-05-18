@@ -11,12 +11,12 @@ $.ajaxSetup({
 // CoinMarketCap
 var url1 = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=VIS,PGX,USDT,USDC,MATIC';
 // Crypto Balance Moralis
-var url2 = 'https://deep-index.moralis.io/api/v2/0xc580Aaf1D3C119E050AAEBf51D8cf912c8183A0A/erc20?chain=polygon';
-var url3 = 'https://deep-index.moralis.io/api/v2/0xc580Aaf1D3C119E050AAEBf51D8cf912c8183A0A/balance?chain=polygon';
+var url2 = 'https://deep-index.moralis.io/api/v2/'+address+'/erc20?chain=polygon';
+var url3 = 'https://deep-index.moralis.io/api/v2/'+address+'/balance?chain=polygon';
 // Assets Count 
-var url4 = 'https://api-apollo.pegaxy.io/v1/assets/count/user/0xc580Aaf1D3C119E050AAEBf51D8cf912c8183A0A';
+var url4 = 'https://api-apollo.pegaxy.io/v1/assets/count/user/'+address;
 // User Pegas
-var url5 = 'https://api-apollo.pegaxy.io/v1/pegas/owner/user/0xc580Aaf1D3C119E050AAEBf51D8cf912c8183A0A';
+var url5 = 'https://api-apollo.pegaxy.io/v1/pegas/owner/user/'+address;
 
 $.when(
     $.getJSON(url1),

@@ -124,14 +124,14 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="bx bxs-collection"></i>
+                    <i class="bx bxs-wallet"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
                      aria-labelledby="page-header-notifications-dropdown">
                     <div class="p-3">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="m-0">Notifications</h6>
+                                <h6 class="m-0">Addresses</h6>
                             </div>
                             <div class="col-auto">
                                 <a href="#!" class="small">View All</a>
@@ -140,43 +140,116 @@
                     </div>
 
                     <div data-simplebar style="max-height: 230px;">
-                        <a href="" class="text-reset notification-item">
-                            <div class="media">
-                                <div class="avatar-xs mr-3">
-                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                        <i class="bx bxs-heart"></i>
-                                    </span>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="mt-0 mb-1">Favourites</h6>
-                                    <div class="font-size-12 text-muted">
-                                        <p class="mb-1">View your Favourites</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="" class="text-reset notification-item">
-                            <div class="media">
-                                <div class="avatar-xs mr-3">
-                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                        <i class="bx bxs-download"></i>
-                                    </span>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="mt-0 mb-1">Downloads</h6>
-                                    <div class="font-size-12 text-muted">
-                                        <p class="mb-1">View your Downloads</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                        <?php 
+                            $query = "SELECT * FROM users where id = $log_userid ";
+                            $result = mysqli_query($db, $query);
+                            $row = mysqli_fetch_array($result);
+                        ?>
+                        
+                        <form method="post">
 
-                    <div class="p-2 border-top">
-                        <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
-                            <i class="mdi mdi-arrow-right-circle mr-1"></i> View_More
-                        </a>
-                    </div>
+                        <input type="hidden" name="usrid" value="<?php echo $row['id']; ?>">
+
+                        <?php if(!empty($row['address_1'])){ ?>
+                            <button style="width: 100%; background: none; border: none;" type="submit" name="address1">
+                                <div class="notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs mr-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                <i class="bx bxs-wallet-alt"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1 float-left">Wallet 1</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <?php if($row['address'] == '1'){ ?>
+                                                    <p class="mb-1 text-wrap text-success">
+                                                        <?php echo $row['address_1']; ?>
+                                                    </p>
+                                                <?php }else{ ?>
+                                                    <p class="mb-1 text-wrap"><?php echo $row['address_1']; ?></p>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        <?php }if(!empty($row['address_2'])){ ?>
+                            <button style="width: 100%; background: none; border: none;" type="submit" name="address2">
+                                <div class="notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs mr-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                <i class="bx bxs-wallet-alt"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1 float-left">Wallet 2</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <?php if($row['address'] == '2'){ ?>
+                                                    <p class="mb-1 text-wrap text-success">
+                                                        <?php echo $row['address_2']; ?>
+                                                    </p>
+                                                <?php }else{ ?>
+                                                    <p class="mb-1 text-wrap"><?php echo $row['address_2']; ?></p>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        <?php }if(!empty($row['address_3'])){ ?>
+                            <button style="width: 100%; background: none; border: none;" type="submit" name="address3">
+                                <div class="notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs mr-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                <i class="bx bxs-wallet-alt"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1 float-left">Wallet 3</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <?php if($row['address'] == '3'){ ?>
+                                                    <p class="mb-1 text-wrap text-success">
+                                                        <?php echo $row['address_3']; ?>
+                                                    </p>
+                                                <?php }else{ ?>
+                                                    <p class="mb-1 text-wrap"><?php echo $row['address_3']; ?></p>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        <?php }if(!empty($row['address_4'])){ ?>
+                            <button style="width: 100%; background: none; border: none;" type="submit" name="address4">
+                                <div class="notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs mr-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                <i class="bx bxs-wallet-alt"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1 float-left">Wallet 4</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <?php if($row['address'] == '4'){ ?>
+                                                    <p class="mb-1 text-wrap text-success">
+                                                        <?php echo $row['address_4']; ?>
+                                                    </p>
+                                                <?php }else{ ?>
+                                                    <p class="mb-1 text-wrap"><?php echo $row['address_4']; ?></p>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        <?php } ?>
+
+                        </form>
+
                 </div>
             </div>
 
@@ -184,8 +257,17 @@
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                    <img class="rounded-circle header-profile-user" src="assets/images/assets/guest.png">
-                    <span class="d-none d-xl-inline-block ml-1">Guest</span>
+                <?php  if (isset($_SESSION['user'])){ ?>
+
+                    <?php if($_SESSION['user']['role'] == 'user') { ?>
+                        <img class="rounded-circle header-profile-user" src="<?php echo 'assets/images/users/'.$log_userimage; ?>">
+                        <span class="d-none d-xl-inline-block ml-1"><?php echo $log_username; ?></span>
+                    <?php }elseif($_SESSION['user']['role'] == 'admin') { ?>
+                        <img class="rounded-circle header-profile-user" src="<?php echo 'admin/assets/images/admins/'.$log_userimage; ?>">
+                        <span class="d-none d-xl-inline-block ml-1"><?php echo $log_username; ?></span>
+                    <?php } ?>
+
+                <?php } ?>
 
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>

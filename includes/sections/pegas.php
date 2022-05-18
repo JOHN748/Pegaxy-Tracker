@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="col-12 text-center">
-        <h4 class="text-muted mb-3 pt-2">PEGAS</h4>
+    <div class="col-12">
+        <h5 class="text-muted mb-3 pt-2">Pegas</h5>
     </div>
 </div>
 

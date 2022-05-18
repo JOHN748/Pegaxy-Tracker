@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         'ajax'   : {
         'type'   : 'GET',
-        'url'    : 'https://api-apollo.pegaxy.io/v1/earnings/historical/user/0xc580Aaf1D3C119E050AAEBf51D8cf912c8183A0A',
+        'url'    : 'https://api-apollo.pegaxy.io/v1/earnings/historical/user/'+address,
         'dataSrc': function (data) {
             var return_data = new Array();
             var len = 1;

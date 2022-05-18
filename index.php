@@ -1,3 +1,8 @@
+<!-- Functions -->
+<?php include ('functions/functions.php'); ?>
+<!-- Session -->
+<?php include ('includes/session.php') ?>
+
 <!-- HTML Start -->
 <!DOCTYPE html>
 <html lang="en">
@@ -11,37 +16,6 @@
     <?php include 'includes/header/header-styles.php'; ?>
     <!-- Script JS -->
     <?php include 'includes/header/header-scripts.php'; ?>
-
-    <style type="text/css">
-        .row.equal-cols {
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-        }
-
-        .row.equal-cols:before,
-        .row.equal-cols:after {
-          display: block;
-        }
-
-        .row.equal-cols > [class*='col-'] {
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
-        }
-
-        .row.equal-cols > [class*='col-'] > * {
-          -webkit-flex: 1 1 auto;
-          -ms-flex: 1 1 auto;
-          flex: 1 1 auto; 
-        }
-    </style>
 </head>
 
 <!-- Body Section -->
@@ -70,8 +44,6 @@
                 <!-- EARNING HISTORY -->
                 <?php include 'includes/sections/earning-history.php' ?>
 
-
-
             </div>
             <!-- End Page Container -->
         </div>
@@ -84,6 +56,9 @@
 
 </div>
 <!-- End layout Wrapper -->
+
+<!-- Wallet Address -->
+<?php include 'includes/address.php' ?>
 
 <!-- Script JS -->
 <script src="assets/js/script.js"></script>
