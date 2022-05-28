@@ -46,9 +46,9 @@
                             <div class="card-body">
                                 <form method="post">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-12 col-md-6 col-lg-6 col-xs-6">
                                             <input type="hidden" name="usrid" value="<?php echo $_SESSION['user']['id']; ?>">
-                                            <label class="form-label">Choose Currency</label>
+                                            <p class="text-muted mb-2">Currency</p>
                                             <select name="currency" class="form-control select2 col-12" onchange="this.form.submit()">
                                                 <?php 
                                                     $query = "SELECT * FROM users where id = $log_userid";
@@ -71,7 +71,7 @@
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12 col-md-6 col-lg-6 col-xs-6">
                                             
                                         </div>
                                     </div>
