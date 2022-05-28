@@ -13,6 +13,9 @@
         }elseif($row['address'] == '4'){
             $address = $row['address_4'];
         }
+
+        $code = $row['currency']; 
     ?>
-    var address= '<?php echo $address; ?>';
+    var address  = '<?php echo $address; ?>';
+    var code = '<?php echo $code; ?>';
 </script>

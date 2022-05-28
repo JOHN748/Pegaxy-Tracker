@@ -308,6 +308,16 @@
   flex: 1 1 auto; 
 }
 
+.addbuts{
+  width: 100%;
+  background: none;
+  border: none;
+}
+
+button.addbuts{
+  padding: 0px !important;
+}
+
 .text-wrap{
   white-space: nowrap;
   overflow: hidden;
@@ -315,6 +325,12 @@
   width: 190px;
 }
 
-.curwal{
-  background-color: green !important;
+.cur_img{
+  width: 25px;
+  height: 20px;
+  border-radius: 2px;
+}
+
+.cur_txt{
+  padding-left: 10px;
 }

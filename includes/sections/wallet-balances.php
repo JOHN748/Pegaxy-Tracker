@@ -12,7 +12,7 @@
                     <div class="flex-grow-1">
                         <p class="text-muted fw-medium">Matic</p>
                         <h4 id="matic" class="mb-0">0</h4>
-                        <h6 style="margin: 0px !important;" id="matic_price" class="text-muted fw-medium pt-2">$0</h6>
+                        <h6 style="margin: 0px !important;" id="matic_price" class="text-muted fw-medium pt-2"><?php echo "0 ".$code; ?></h6>
                     </div>
 
                     <div class="flex-shrink-0 align-self-center">
@@ -29,7 +29,7 @@
                     <div class="flex-grow-1">
                         <p class="text-muted fw-medium">Vigorus</p>
                         <h4 id="vis" class="mb-0">0</h4>
-                        <h6 style="margin: 0px !important;" id="vis_price" class="text-muted fw-medium pt-2">$0</h6>
+                        <h6 style="margin: 0px !important;" id="vis_price" class="text-muted fw-medium pt-2"><?php echo "0 ".$code; ?></h6>
                     </div>
 
                     <div class="flex-shrink-0 align-self-center">
@@ -46,7 +46,7 @@
                     <div class="flex-grow-1">
                         <p class="text-muted fw-medium">Locked Vigorus</p>
                         <h4 id="lockedvis" class="mb-0">0</h4>
-                        <h6 style="margin: 0px !important;" id="visoff_price" class="text-muted fw-medium pt-2">$0</h6>
+                        <h6 style="margin: 0px !important;" id="visoff_price" class="text-muted fw-medium pt-2"><?php echo "0 ".$code; ?></h6>
                     </div>
 
                     <div class="flex-shrink-0 align-self-center">
@@ -63,7 +63,7 @@
                     <div class="flex-grow-1">
                         <p class="text-muted fw-medium">Pegaxy Stone</p>
                         <h4 id="pgx" class="mb-0">0</h4>
-                        <h6 style="margin: 0px !important;" id="pgx_price" class="text-muted fw-medium pt-2">$0</h6>
+                        <h6 style="margin: 0px !important;" id="pgx_price" class="text-muted fw-medium pt-2"><?php echo "0 ".$code; ?></h6>
                     </div>
 
                     <div class="flex-shrink-0 align-self-center">
@@ -80,7 +80,7 @@
                     <div class="flex-grow-1">
                         <p class="text-muted fw-medium">USDT</p>
                         <h4 id="usdt" class="mb-0">0</h4>
-                        <h6 style="margin: 0px !important;" id="usdt_price" class="text-muted fw-medium pt-2">$0</h6>
+                        <h6 style="margin: 0px !important;" id="usdt_price" class="text-muted fw-medium pt-2"><?php echo "0 ".$code; ?></h6>
                     </div>
 
                     <div class="flex-shrink-0 align-self-center">
@@ -97,7 +97,7 @@
                     <div class="flex-grow-1">
                         <p class="text-muted fw-medium">USDC</p>
                         <h4 id="usdc" class="mb-0">0</h4>
-                        <h6 style="margin: 0px !important;" id="usdc_price" class="text-muted fw-medium pt-2">$0</h6>
+                        <h6 style="margin: 0px !important;" id="usdc_price" class="text-muted fw-medium pt-2"><?php echo "0 ".$code; ?></h6>
                     </div>
 
                     <div class="flex-shrink-0 align-self-center">

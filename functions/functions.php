@@ -221,7 +221,6 @@ function toggleadd1($usrid){
 	$sql = "UPDATE users SET address= 1 WHERE id=$usrid";
 	
 	if (mysqli_query($db, $sql)) {
-		$_SESSION['success'] = 'Successfully Added to Featured Product';
 		header("location: index.php");
 		exit(0);
 	}
@@ -232,7 +231,6 @@ function toggleadd2($usrid){
 	$sql = "UPDATE users SET address= 2 WHERE id=$usrid";
 	
 	if (mysqli_query($db, $sql)) {
-		$_SESSION['success'] = 'Successfully Added to Featured Product';
 		header("location: index.php");
 		exit(0);
 	}
@@ -243,7 +241,6 @@ function toggleadd3($usrid){
 	$sql = "UPDATE users SET address= 3 WHERE id=$usrid";
 	
 	if (mysqli_query($db, $sql)) {
-		$_SESSION['success'] = 'Successfully Added to Featured Product';
 		header("location: index.php");
 		exit(0);
 	}
@@ -254,10 +251,49 @@ function toggleadd4($usrid){
 	$sql = "UPDATE users SET address= 4 WHERE id=$usrid";
 	
 	if (mysqli_query($db, $sql)) {
-		$_SESSION['success'] = 'Successfully Added to Featured Product';
 		header("location: index.php");
 		exit(0);
 	}
 }
+
+// Currency 
+
+function currencies(){
+
+	global $db;
+	
+	$query = "SELECT * FROM currencies";
+	
+	$run_query = mysqli_query($db, $query);
+	
+	$currdetails = mysqli_fetch_all($run_query, MYSQLI_ASSOC);
+
+	$getdetails = array();
+
+	foreach ($currdetails as $currdetail) {
+
+		array_push($getdetails, $currdetail);
+
+	}
+
+	return $getdetails;
+}
+
+if (isset($_POST['currency'])) {
+	$currency = $_POST['currency'];
+	$usrid = $_POST['usrid'];
+	updatecurr($currency, $usrid);
+}
+
+function updatecurr($currency, $usrid){
+	global $db;
+	$sql = "UPDATE users SET currency = '$currency' WHERE id = '$usrid' ";
+	if (mysqli_query($db, $sql)) {
+		header("location: settings.php");
+		exit(0);
+	}
+}
+
+
 
 ?>

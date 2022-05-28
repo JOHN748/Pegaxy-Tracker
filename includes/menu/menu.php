@@ -139,7 +139,7 @@
                         </div>
                     </div>
 
-                    <div data-simplebar style="max-height: 230px;">
+                    <div data-simplebar style="max-height: auto;">
                         <?php 
                             $query = "SELECT * FROM users where id = $log_userid ";
                             $result = mysqli_query($db, $query);
@@ -151,7 +151,7 @@
                         <input type="hidden" name="usrid" value="<?php echo $row['id']; ?>">
 
                         <?php if(!empty($row['address_1'])){ ?>
-                            <button style="width: 100%; background: none; border: none;" type="submit" name="address1">
+                            <button class="addbuts" type="submit" name="address1">
                                 <div class="notification-item">
                                     <div class="media">
                                         <div class="avatar-xs mr-3">
@@ -175,7 +175,7 @@
                                 </div>
                             </button>
                         <?php }if(!empty($row['address_2'])){ ?>
-                            <button style="width: 100%; background: none; border: none;" type="submit" name="address2">
+                            <button class="addbuts" type="submit" name="address2">
                                 <div class="notification-item">
                                     <div class="media">
                                         <div class="avatar-xs mr-3">
@@ -199,7 +199,7 @@
                                 </div>
                             </button>
                         <?php }if(!empty($row['address_3'])){ ?>
-                            <button style="width: 100%; background: none; border: none;" type="submit" name="address3">
+                            <button class="addbuts" type="submit" name="address3">
                                 <div class="notification-item">
                                     <div class="media">
                                         <div class="avatar-xs mr-3">
@@ -223,7 +223,7 @@
                                 </div>
                             </button>
                         <?php }if(!empty($row['address_4'])){ ?>
-                            <button style="width: 100%; background: none; border: none;" type="submit" name="address4">
+                            <button class="addbuts" type="submit" name="address4">
                                 <div class="notification-item">
                                     <div class="media">
                                         <div class="avatar-xs mr-3">
@@ -274,7 +274,7 @@
 
                 <div class="dropdown-menu dropdown-menu-right">
 
-                    <a class="dropdown-item d-block" href="#"><i class="fa fa-wrench mr-2"></i> Settings</a>
+                    <a class="dropdown-item d-block" href="settings.php"><i class="fa fa-wrench mr-2"></i> Settings</a>
                     <div class="dropdown-divider"></div>
 
                     <a class="dropdown-item text-danger" href="index.php?logout='1'"><i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> Logout</a>

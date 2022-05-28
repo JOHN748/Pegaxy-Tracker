@@ -1,3 +1,5 @@
+<!-- Select2 CSS -->
+<link rel="stylesheet" href="assets/libs/select2/css/select2.min.css">
 <!-- Bootstrap CSS -->
 <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css"/>
 <!-- Icons CSS -->
@@ -5,8 +7,6 @@
 <!-- App CSS -->
 <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css"/>
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
-
-
 <!-- DataTable CSS -->
 <link href="assets/libs/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
 <link href="assets/libs/datatables/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css"/>

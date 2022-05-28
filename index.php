@@ -21,6 +21,9 @@
 <!-- Body Section -->
 <body data-sidebar="dark">
 
+<!-- Initiable -->
+<?php include 'includes/initiable.php' ?>
+
 <!-- Begin page -->
 <div id="layout-wrapper">
 
@@ -56,9 +59,6 @@
 
 </div>
 <!-- End layout Wrapper -->
-
-<!-- Wallet Address -->
-<?php include 'includes/address.php' ?>
 
 <!-- Script JS -->
 <script src="assets/js/script.js"></script>
