@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#datatable').DataTable({
+    $('#datatable1').DataTable({
 
         'ajax'   : {
         'type'   : 'GET',
@@ -118,52 +118,52 @@ $(document).ready(function() {
     });
     
 	$('.btn-copy').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '0' ).trigger();
     });
     
     $('.btn-excel').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '1' ).trigger();
     });
     
     $('.btn-pdf').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '2' ).trigger();
     });
     
     $('.btn-csv').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '3' ).trigger();
     });
 
     $('.btn-print').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '4' ).trigger();
     });
 
     $('.btn-ownracedvis').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '5' ).trigger();
     });
 
     $('.btn-renteevis').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '6' ).trigger();
     });
 
     $('.btn-rentervis').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '7' ).trigger();
     });
 
     $('.btn-ownervis').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '8' ).trigger();
     });
 
     $('.btn-showall').on('click',function(){
-        var table = $('#datatable').DataTable();
+        var table = $('#datatable1').DataTable();
         table.button( '9' ).trigger();
     });        
 
@@ -171,14 +171,14 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    var dataTable = $('#datatable').dataTable();
+    var dataTable = $('#datatable1').dataTable();
     $("#searchbox").keyup(function() {
         dataTable.fnFilter(this.value);
     });    
 });
 
 $(document).ready(function() {
- var dataTable = $("#datatable").DataTable();
+ var dataTable = $("#datatable1").DataTable();
 
  minDateFilter = "";
  maxDateFilter = "";

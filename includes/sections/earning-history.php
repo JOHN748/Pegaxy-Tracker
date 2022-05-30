@@ -76,7 +76,7 @@
                 </div>
 
                 <!-- Earnings History Table -->
-                <table id="datatable" class="table table-striped table-hover table-bordered display nowrap text-center" style="width: 100%;">
+                <table id="datatable1" class="table table-striped table-hover table-bordered display nowrap text-center" style="width: 100%;">
                     <thead class="thead-dark" style="width: 100% !important;">
                         <tr>
                             <th class="text-center">No</th>
