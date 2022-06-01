@@ -47,6 +47,9 @@
                 <!-- EARNING HISTORY -->
                 <?php include 'includes/sections/earning-history.php' ?>
 
+                <!-- EARNING PEGA -->
+                <?php include 'includes/sections/earning-pega.php' ?>
+
             </div>
             <!-- End Page Container -->
         </div>

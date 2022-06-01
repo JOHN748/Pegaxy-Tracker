@@ -113,7 +113,17 @@ $(document).ready(function() {
         lengthChange: !1, 
         lengthChange: true,
         scrollX: true,
-        searching: true
+        searching: true,
+        ordering: false,
+
+        language:{
+            "emptyTable":     "No Histories are available to show",
+            "info":           "Showing _START_ to _END_ of _TOTAL_ Histories",
+            "infoEmpty":      "Showing 0 to 0 of 0 Histories",
+            "infoFiltered":   "(filtered from _MAX_ total Histories)",
+            "lengthMenu":     "Show _MENU_ Histories",
+            "zeroRecords":    "No matching Histories found",
+        }
 
     });
     
